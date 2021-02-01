@@ -15,7 +15,7 @@ pub struct MiniTokio {
 impl MiniTokio {
     pub fn new() -> Self {
         let (sender, scheduled) = channel::unbounded();
-
+        
         MiniTokio { scheduled, sender}
     }
 

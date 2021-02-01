@@ -5,7 +5,10 @@ use std::{
     task::Context,
 };
 use crossbeam::channel;
-use futures::task::{self, ArcWake};
+use futures::task::{
+    self,
+    ArcWake
+};
 
 pub struct Task {
     future: Mutex<Pin<Box<dyn Future<Output = ()> + Send>>>,
